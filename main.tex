@@ -178,7 +178,28 @@ Again, a common choice for $f_0$ is given by $f_0(c) = \frac{\xi}{4} c^2(1 - c)^
 where $\xi$ defines the barrier height, i.e. the local maximum at $c = 1/2$ . We set  $\xi = 1$ in our experiments.
 
 
-\section{Kelvin-Helmhotz instability on a sphere}
+\section{Tests for the paper}
+\subsection{Convergence test with rotational velocity field}
+Run the simulation as shown in the Figure 1.\\
+
+{\color{red}\textbf{Parameters:}}\\
+\begin{itemize}
+	\item Set $\rho_0=\rho_1.$
+	\item Set initital $\bu = (-y,x,0).$
+	\item Set $\textbf{f} = 0$, no external forces acting.
+	\item $\epsilon=10^{-2}$ for running on level 6?
+	\item On coarser mesh, check when it makes at least $180^\circ$ turn, then choose time interval. 
+	\item $\eta_0=\eta_1 = 10^{-2}$
+\end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{images/rotation.pdf}
+	\caption{Sphere with rotation field}
+	\label{fig:rotation}
+\end{figure}
+
+\subsection{Kelvin-Helmhotz instability on a sphere}
 
 Kelvin-Helmholtz instability simulation \textbf{below} is on mesh level $l=5$ with $\epsilon = 10^{-2};$ line tension $\sigma_\gamma = 10^{-3};$ time interval $t\in [0,20]$ with  640 steps;\\
 \begin{figure}[h]
@@ -240,20 +261,11 @@ Kelvin-Helmholtz instability simulation \textbf{below} is on mesh level $l=5$ wi
 
 Click for the animation of \href{https://www.dropbox.com/s/efymgjo6drifeoj/KH-concentration-l5-lt1e3-lmyes-ltyes.avi?dl=0}{concentration} and \href{https://www.dropbox.com/s/mtjzgtt2ec7nuzj/KH-vorticity-l5-lt1e3-lmyes-ltyes.avi?dl=0}{vorticity}.
 
-\subsection{On vortices of KH}
-KH simulation forms 4 vortices at around $t=4$, and 3 of 4 are identical fourth one is different. See the figure below(front and back):
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.15\textwidth}
-		\includegraphics[scale=0.1]{images/KHvorticity1.png}
-		
-	\end{subfigure} 
-	\begin{subfigure}[b]{0.15\textwidth}
-		\includegraphics[scale=0.1]{images/KHvorticity2.png}
-		
-	\end{subfigure}
-	
-\end{figure}
+
+
+\subsection{Rayleigh-Taylor instability on a torus }
+
+
 
 \section{Rayleigh-Taylor instability on a torus}
 
